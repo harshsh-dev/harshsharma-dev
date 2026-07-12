@@ -1,14 +1,15 @@
 export const personal = {
   name: "Harsh Sharma",
-  title: "Senior Backend Engineer",
-  subtitle: "Microservices & Distributed Systems",
+  title: "Senior Software Engineer",
+  subtitle: "Backend & Distributed Systems",
   email: "harshsharma.ext@gmail.com",
   phone: "+91 93142 22527",
   linkedin: "https://www.linkedin.com/in/harsh-sharma-8a850b173/",
   github: "https://github.com/harshsh-dev",
   location: "Bangalore, India",
+  resume: "/Harsh_Sharma_Resume.pdf",
   summary:
-    "Backend Engineer with 5+ years designing high-throughput, resilient distributed systems in fintech and banking. Building production-grade microservices serving millions of transactions daily.",
+    "Senior Software Engineer with 5+ years designing high-throughput, resilient distributed systems across fintech and banking. Ship production-grade microservices in Rust, Go, Java and Python — serving millions of customers and transactions daily.",
 };
 
 export const stats = [
@@ -28,25 +29,32 @@ export const experience = [
   {
     id: "idfc",
     company: "IDFC FIRST Bank",
-    role: "Software Engineer",
+    role: "Senior Software Engineer",
     location: "Bangalore, KA",
     period: "Dec 2025 – Present",
     current: true,
     color: "#00F5C4",
     highlights: [
-      "Shipped Nominee Management & Audit Service from scratch to production in under 1 week, serving 1M+ customers on day one",
-      "Built Interest Calculator service handling complex computation across multiple product types with full audit trail",
-      "Maintained strict regulatory compliance and data integrity standards throughout rapid delivery cycles",
-      "Accelerated delivery using AI-assisted development with Claude Code",
+      "Shipped the Nominee Management & Audit Service from concept to production in under one week using Java Spring Boot — serving 1M+ customers on day one",
+      "Built an Interest Calculator service in Go handling complex computation across multiple banking product types with a complete audit trail",
+      "Built the Standing Instruction (SI) service from scratch and integrated it synchronously with the TCS BaNCS core banking system to automate recurring transactions and payment instructions",
+      "Owned end-to-end delivery — architecture, implementation, integration, deployment and production readiness — inside a strict regulated banking environment",
     ],
-    tags: ["Python", "FastAPI", "PostgreSQL", "Microservices", "Claude Code"],
+    tags: [
+      "Java",
+      "Spring Boot",
+      "Go",
+      "TCS BaNCS",
+      "PostgreSQL",
+      "Microservices",
+    ],
   },
   {
     id: "kotak",
     company: "Kotak Mahindra Bank",
     role: "Software Engineer II",
     location: "Bangalore, KA",
-    period: "May 2024 – Nov 2025",
+    period: "May 2024 – Dec 2025",
     current: false,
     color: "#F97316",
     highlights: [
@@ -73,7 +81,7 @@ export const experience = [
     company: "Juspay",
     role: "Software Engineer – Integration",
     location: "Bangalore, KA",
-    period: "Apr 2022 – Feb 2024",
+    period: "Apr 2022 – Apr 2024",
     current: false,
     color: "#A855F7",
     highlights: [
@@ -90,25 +98,23 @@ export const experience = [
     company: "Apisero",
     role: "Software Engineer",
     location: "Remote",
-    period: "May 2021 – Jan 2022",
+    period: "May 2021 – Mar 2022",
     current: false,
     color: "#00ADD8",
     highlights: [
-      "OTP-based 2FA in Java Spring Boot securing 100K+ enterprise users",
-      "Go (Gin) internal APIs adopted by 3+ teams for secure service communication",
-      "FHIR-compliant healthcare APIs on MuleSoft CloudHub — 50% better HL7 interoperability",
-      "DataWeave Salesforce scheduler optimization — 100% sync accuracy across 1M+ records",
+      "Optimised Salesforce scheduler APIs with DataWeave — 100% sync accuracy across 1M+ records",
+      "Developed FHIR-compliant healthcare APIs on MuleSoft CloudHub, improving HL7 interoperability across healthcare systems",
     ],
-    tags: ["Java", "Spring Boot", "Go", "MuleSoft", "FHIR", "Salesforce"],
+    tags: ["MuleSoft", "DataWeave", "Salesforce", "FHIR", "HL7", "CloudHub"],
   },
 ];
 
 export const techStack = {
   languages: [
     { name: "Python", color: "#3776AB", level: 95 },
-    { name: "Rust", color: "#F97316", level: 80 },
-    { name: "Go", color: "#00ADD8", level: 75 },
-    { name: "Java", color: "#ED8B00", level: 70 },
+    { name: "Java", color: "#ED8B00", level: 85 },
+    { name: "Go", color: "#00ADD8", level: 82 },
+    { name: "Rust", color: "#F97316", level: 78 },
   ],
   categories: [
     {

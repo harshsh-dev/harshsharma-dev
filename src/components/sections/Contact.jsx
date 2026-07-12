@@ -1,23 +1,9 @@
 import { motion } from "framer-motion";
-import { Mail } from "lucide-react";
+import { Mail, FileDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../ui/BrandIcons.jsx";
 import SectionWrapper from "../layout/SectionWrapper.jsx";
-import Terminal from "../ui/Terminal.jsx";
-import { personal } from "../../data/portfolio.js";
-
-const TERMINAL_LINES = [
-  "> whoami",
-  "  Harsh Sharma — Senior Backend Engineer",
-  "",
-  "> status",
-  "  ● Available for senior backend / distributed systems roles",
-  "",
-  "> contact",
-  `  email     ${personal.email}`,
-  `  linkedin  ${personal.linkedin.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}`,
-  `  github    ${personal.github.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}`,
-  `  location  ${personal.location}`,
-];
+import InteractiveTerminal from "../ui/InteractiveTerminal.jsx";
+import { personal, experience, techStack } from "../../data/portfolio.js";
 
 export default function Contact() {
   return (
@@ -35,8 +21,18 @@ export default function Contact() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <Terminal lines={TERMINAL_LINES} typingSpeed={18} lineDelay={180} />
+          <InteractiveTerminal
+            experience={experience}
+            languages={techStack.languages}
+          />
         </motion.div>
+
+        <p className="mt-3 text-center font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">
+          Tip: try <span className="text-[var(--color-accent)]">resume</span>,{" "}
+          <span className="text-[var(--color-accent)]">help</span>, or{" "}
+          <span className="text-[var(--color-accent)]">experience</span> ·
+          ⌘/Ctrl+L to clear
+        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -51,6 +47,14 @@ export default function Contact() {
           >
             <Mail className="size-4" />
             Send me an email
+          </a>
+          <a
+            href={personal.resume}
+            download="Harsh_Sharma_Resume.pdf"
+            className="inline-flex items-center gap-2 rounded-full border border-[var(--color-accent)]/60 bg-[var(--color-accent-dim)] px-6 py-3 font-mono text-xs uppercase tracking-wider text-[var(--color-accent)] transition-all duration-300 hover:bg-[var(--color-accent)] hover:text-[var(--color-bg)]"
+          >
+            <FileDown className="size-4" />
+            Download Resume
           </a>
           <a
             href={personal.linkedin}
